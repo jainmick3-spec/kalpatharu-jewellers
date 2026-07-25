@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}KALPATHARU JEWELLERS{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>KALPATHARU JEWELLERS</h1>
+    <p>Gold & Silver Jewellery</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/gold">Gold</a>
+    <a href="/silver">Silver</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+<form action="/search" method="GET" style="display:inline-block; margin-left:20px;">
+    <input
+        type="text"
+        name="q"
+        placeholder="Search jewellery..."
+        style="padding:8px; border-radius:5px; border:none;">
+    <button
+        type="submit"
+        style="padding:8px 12px; background:gold; border:none; border-radius:5px; cursor:pointer;">
+        Search
+    </button>
+</form>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+
+    <h2>KALPATHARU JEWELLERS</h2>
+
+    <p>
+        Premium Gold & Silver Jewellery
+    </p>
+
+    <p>
+        📞 Phone: 08819 224640
+    </p>
+
+    <p>
+        💬 WhatsApp:
+        <a href="https://wa.me/919490347551" target="_blank">
+            Chat with Us
+        </a>
+    </p>
+
+    <p>
+        📍 33, Rashtrapathi Rd,
+        Venkatarayapuram,
+        Tanuku,
+        Andhra Pradesh - 534211
+    </p>
+
+    <div class="social-links">
+
+        <a href="https://www.facebook.com/share/14iXV9gZ56w/" target="_blank">
+            Facebook
+        </a>
+
+        |
+
+        <a href="https://www.instagram.com/__kalpatarujewellers__?igsh=MW94ajMyeHdubDdwMg=" target="_blank">
+            Instagram
+        </a>
+
+        |
+
+        <a href="https://share.google/zmGQriZF6f0z1crKR" target="_blank">
+            Google Maps
+        </a>
+
+    </div>
+
+    <br>
+
+    <p>
+        © 2026 KALPATHARU JEWELLERS. All Rights Reserved.
+    </p>
+
+</footer>
+
+<a href="https://wa.me/919490347551"
+   class="whatsapp-float"
+   target="_blank">
+    💬
+</a>
+<footer style="background:#111; color:white; text-align:center; padding:30px; margin-top:50px;">
+    <h2 style="color:gold;">KALPATHARU JEWELLERS</h2>
+
+    <p>📍 33, Rashtrapathi Rd, Venkatarayapuram, Tanuku, Andhra Pradesh - 534211</p>
+
+    <p>📞 08819 224640 | 📱 +91 94903 47551</p>
+
+    <p>
+        <a href="https://wa.me/919490347551" target="_blank" style="color:gold; text-decoration:none;">WhatsApp</a> |
+        <a href="https://www.instagram.com/__kalpatarujewellers__/" target="_blank" style="color:gold; text-decoration:none;">Instagram</a> |
+        <a href="https://www.facebook.com/share/14iXV9gZ56w/" target="_blank" style="color:gold; text-decoration:none;">Facebook</a>
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 KALPATHARU JEWELLERS. All Rights Reserved.
+    </p>
+</footer>
+</body>
+</html>
