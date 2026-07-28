@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login{% endblock %}
+
+{% block content %}
+
+<div style="max-width:400px; margin:60px auto; padding:30px; background:white; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+
+    <h2 style="text-align:center;">Admin Login</h2>
+
+    <form method="POST">
+
+        <label>Username</label><br>
+        <input type="text" name="username" style="width:100%; padding:10px;"><br><br>
+
+        <label>Password</label><br>
+        <input type="password" name="password" style="width:100%; padding:10px;"><br><br>
+
+        <button type="submit" class="btn" style="width:100%;">
+            Login
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

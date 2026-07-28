@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Silver Collection{% endblock %}
+
+{% block content %}
+
+<h1 style="text-align:center;">Silver Collection</h1>
+
+<div class="products">
+
+{% for product in products %}
+
+<div class="product-card">
+
+    <h3>{{ product[1] }}</h3>
+<img src="{{ url_for('static', filename='uploads/' + product[5]) }}" alt="{{ product[1] }}" style="width:100%; height:250px; object-fit:cover; border-radius:10px;">
+    <p><strong>Category:</strong> {{ product[2] }}</p>
+
+    <p><strong>Weight:</strong> {{ product[3] }}</p>
+
+    <p><strong>Price:</strong> {{ product[4] }}</p>
+
+   <a href="https://wa.me/919490347551?text=Hello,%20I'm%20interested%20in%20{{ product[1] }}.%20Please%20share%20the%20price%20and%20more%20details."
+   target="_blank">
+    Enquire Now
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
